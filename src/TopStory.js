@@ -4,7 +4,7 @@ class TopStory extends Component {
   render() {
     const multimedia = { ...this.props.multimedia[4] };
     return (
-      <div className="frontPageNews">
+      <div className="frontPageNews"> 
       <div className="container">
         <div>
           <img className="frontPageImage" src={multimedia.url} alt="" />

@@ -4,7 +4,8 @@ class Form extends Component {
   constructor() {
     super();
     this.state = {
-        searchInput: ''
+        searchInput: '',
+        page: 0
     };
   }
   handleChange = e => {
@@ -16,8 +17,21 @@ class Form extends Component {
   };
   handleSubmit = e=>{
       e.preventDefault()
-      this.props.getArticle(this.state.searchInput)
+      this.props.getArticle(this.state.searchInput, this.state.page)
   }
+ 
+  handlePageUp = () => {
+   this.setState({
+      page: this.state.page < 100 ? (this.state.page +1) : 100
+
+   },()=>{this.props.getArticle(this.state.searchInput, this.state.page)})
+  };
+  
+  handlePageDown = () => {
+    this.setState({
+      page: this.state.page > 0 ? (this.state.page -1) : 0
+    }, ()=>this.props.getArticle(this.state.searchInput, this.state.page))
+  };
   render() {
     // console.log(this.props)
 
@@ -33,6 +47,8 @@ class Form extends Component {
           />
           <button>GO</button>
         </form>
+        <button className="previous" onClick={this.handlePageDown}>Previous</button>
+        <button className="next" onClick={this.handlePageUp}>Next</button>
       </div>
     );
   }

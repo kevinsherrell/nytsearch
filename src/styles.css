@@ -164,6 +164,8 @@ li {
 }
 
 .searchForm {
+  display: sticky;
+  top: 500;
   height: 40px;
   display: grid;
   grid-template-columns: 6fr 1fr;
@@ -187,7 +189,19 @@ li {
   font-size: 9px;
   font-weight: 800;
 }
-
+.next,.previous{
+  width: 49%;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: rgba(98, 136, 165, 0.5);
+  color: white;
+  border-radius: 5px;
+}
+.previous{
+  margin-right: 5px;
+  
+}
 .overlayNav {
   margin-top: 30px;
   font-family: sans-serif;
@@ -267,7 +281,9 @@ li {
 .frontPageNews a:hover {
   color: #666666;
 }
-
+.frontPageNews .container{
+  text-align: center;
+}
 .frontPageHeadline {
   padding-top: 10px;
   text-align: center;
@@ -314,6 +330,12 @@ li {
   }
 }
 @media only screen and (min-width: 1024px) {
+  .container{
+    width: 60%;
+  }
+  .frontPageNews .container{
+    width: 90%;
+  }
   .newsGrid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -322,4 +344,9 @@ li {
     
     background-size: cover;
     background-position: center;
+}
+img{
+  text-align: center;
+  object-fit: cover;
+  width: 90%;
 }

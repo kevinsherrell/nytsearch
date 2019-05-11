@@ -7,9 +7,9 @@ const Articles = props => {
   return (
     <div style={{alignSelf: `${!props.multimedia.length && 'start'}`}} className="frontPageNews">
       <div className="container">
-        <div style={{backgroundImage: bgImage, padding: `${!props.multimedia.length ? '0': '50%'}`}} className='imageContainer'>
-        
-        </div>
+          <img src={props.multimedia.length && [props.web_url.slice(0,24), props.multimedia[55].url].join('')} alt=""/>
+        {/* <div style={{backgroundImage: bgImage, padding: `${!props.multimedia.length ? '0': '50%'}`}} className='imageContainer'>
+        </div> */}
 
         <a href={props.web_url} target="blank">
             <h3 style={{fontSize: `${!props.multimedia.length && '40px'}`}} className="frontPageHeadline">{props.headline.main}</h3>

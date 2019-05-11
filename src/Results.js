@@ -16,7 +16,7 @@ class Results extends Component {
       return <ArticleContainer {...result} key={result._id} />
     })
     return(
-      <div className='newsGrid'>
+      <div className='newsGrid container'>
       { mappedResults }
       </div>
     )
