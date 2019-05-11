@@ -3,7 +3,7 @@ import axios from "axios";
 import { withRouter } from "react-router-dom";
 require('dotenv').config()
 const DataContext = React.createContext();
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 class DataProvider extends Component {
   state = {

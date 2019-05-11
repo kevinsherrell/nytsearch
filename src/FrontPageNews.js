@@ -3,7 +3,7 @@ import TopStory from './TopStory'
 import {withData} from './context/dataProvider'
 import axios from 'axios'
 require('dotenv').config()
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 class FrontPageNews extends Component {
     state = { 
