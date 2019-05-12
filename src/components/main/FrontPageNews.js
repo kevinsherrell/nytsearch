@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import FrontPageArticles from "./FrontPageArticles";
-import { withData } from "../../context/dataProvider";
 import axios from "axios";
+
+import { withData } from "../../context/dataProvider";
+
+import FrontPageArticles from "./FrontPageArticles";
 require("dotenv").config();
 // const apiKey = process.env.REACT_APP_API_KEY;
-const apiKey = "f9cdUfhLfBKNlN0arcby30dbeQ7LnXUI";
 
 class FrontPageNews extends Component {
   state = {
@@ -34,7 +35,10 @@ class FrontPageNews extends Component {
 
     return (
       <React.Fragment>
-       <div className='container'> <div className="newsGrid">{mappedFrontPage}</div></div>
+        <div className="container">
+          {" "}
+          <div className="newsGrid">{mappedFrontPage}</div>
+        </div>
       </React.Fragment>
     );
   }

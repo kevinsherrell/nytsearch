@@ -4,8 +4,6 @@ import { withRouter } from "react-router-dom";
 require("dotenv").config();
 const DataContext = React.createContext();
 // const apiKey = process.env.REACT_APP_API_KEY;
-const apiKey = "f9cdUfhLfBKNlN0arcby30dbeQ7LnXUI";
-
 class DataProvider extends Component {
   state = {
     // frontPageNews: [],
