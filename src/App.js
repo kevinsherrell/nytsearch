@@ -3,18 +3,15 @@ import {
   withRouter
 } from "react-router-dom";
 
-import Header from "./Header";
-// import Menu from './Menu'
-import Form from "./Form";
-import NavBottom from "./NavBottom";
-import Main from "./Main";
-
-
+import Header from "./components/header/Header";
+import NavTop from "./components/header/NavTop";
+import NavBottom from "./components/header/NavBottom";
+import Main from "./components/main/Main";
+import Form from "./components/main/Form";
 
 import { withData } from "./context/dataProvider";
 import "./styles.css";
 
-import NavTop from "./NavTop";
 
 
 class App extends Component {

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-const apiKey = process.env.REACT_APP_API_KEY;
+// const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = "f9cdUfhLfBKNlN0arcby30dbeQ7LnXUI";
+
 class TopStories extends Component {
   state = {
       topStories: []

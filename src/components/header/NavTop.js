@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import logo from './newyorktimes.svg'
+import logo from '../../images/newyorktimes.svg'
 
 
 class NavTop extends Component {

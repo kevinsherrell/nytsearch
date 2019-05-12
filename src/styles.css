@@ -339,7 +339,30 @@ li {
   .newsGrid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .formContainer{
+    text-align: center;
+  }
+  .formContainer .previous,
+  .formContainer .next{
+    display: inline-block;
+    width: 10%; 
+    /* margin: 0 auto;  */
+    text-align: center;  
+  }
+  .searchForm {
+    display: flex;  
+    top: 500;
+    height: 40px;
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+  }
+  /* .previous,.next{
+    
+  } */
 }
+
 .imageContainer{
     
     background-size: cover;

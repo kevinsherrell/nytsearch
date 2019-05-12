@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ArticleContainer from "./ArticleContainer";
-import {withData} from './context/dataProvider'
+import {withData} from '../../context/dataProvider'
 class Results extends Component {
   state = {
     searchResults: this.props.searchResults

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Form from './Form'
-import logo from './newyorktimes.svg'
-import close from './close-icon.png'
+import Form from '../main/Form'
+import logo from '../../images/newyorktimes.svg'
+import close from '../../images/close-icon.png'
 
 
 class Menu extends Component {

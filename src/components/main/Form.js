@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {withData} from './context/dataProvider'
+import {withData} from '../../context/dataProvider'
 class Form extends Component {
   constructor() {
     super();
@@ -36,7 +36,7 @@ class Form extends Component {
     // console.log(this.props)
 
     return (
-      <div className="container" >
+      <div className=" formContainer container" >
         <form className="searchForm" onSubmit={this.handleSubmit}>
           <input
             type="text"
