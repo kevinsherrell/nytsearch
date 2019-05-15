@@ -3,11 +3,15 @@ import axios from "axios";
 import { withRouter } from "react-router-dom";
 require("dotenv").config();
 const DataContext = React.createContext();
-// const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
+
 class DataProvider extends Component {
   state = {
     // frontPageNews: [],
+    searchInput: '',
     searchResults: [],
+    menuToggle: false,
+    page: 0
   };
 
   getArticle = (searchInput,page) => {
@@ -19,7 +23,8 @@ class DataProvider extends Component {
       )
       .then(response => {
         this.setState({
-          searchResults: response.data.response.docs
+          searchResults: response.data.response.docs,
+          searchInput: searchInput
         });
       })
       .catch(error => {
@@ -29,13 +34,31 @@ class DataProvider extends Component {
   };
 
   toggleMenu = event => {
-    event.preventDefault();
+    // event.preventDefault();
     this.setState({
-      menuToggle: true
+      menuToggle: !this.state.menuToggle
     });
   };
 
- 
+  handlePageUp = (searchInput,page) => {
+    this.setState(
+      {
+        page: this.state.page < 100 ? this.state.page + 1 : 100
+      },
+      () => {
+        this.getArticle(this.state.searchInput, this.state.page);
+      }
+    );
+  };
+
+  handlePageDown = (searchInput, page) => {
+    this.setState(
+      {
+        page: this.state.page > 0 ? this.state.page - 1 : 0
+      },
+      () => this.getArticle(this.state.searchInput, this.state.page)
+    );
+  };
   render() {
     return (
       <DataContext.Provider

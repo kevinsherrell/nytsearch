@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-import { withData } from "../../context/dataProvider";
+import styled from "styled-components";
+import Wrapper_S from "../../styled/Wrapper_S";
+import { withData } from "../../../context/dataProvider";
 
 import FrontPageArticles from "./FrontPageArticles";
 require("dotenv").config();
-// const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 class FrontPageNews extends Component {
   state = {
@@ -27,21 +29,39 @@ class FrontPageNews extends Component {
   }
 
   render() {
-    console.log(this.state);
-    // console.log(frontPage)
     const mappedFrontPage = this.state.frontPageNews.map((article, key) => {
       return <FrontPageArticles {...article} key={article.url} />;
     });
 
     return (
       <React.Fragment>
-        <div className="container">
+        {/* <div className="container">
           {" "}
           <div className="newsGrid">{mappedFrontPage}</div>
-        </div>
+        </div> */}
+
+        <FrontPageWrapper>
+          <NewsGrid>{mappedFrontPage}</NewsGrid>
+        </FrontPageWrapper>
       </React.Fragment>
     );
   }
 }
-
+const SearchNavigation = styled.div`
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+`;
+const FrontPageWrapper = styled(Wrapper_S)`
+  button {
+    width: 100%;
+  }
+`;
+const NewsGrid = styled.div`
+  display: grid;
+  grid-gap: 15px;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+`;
 export default withData(FrontPageNews);

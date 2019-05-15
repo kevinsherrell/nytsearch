@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
-import Menu from "./Menu";
+import styled from 'styled-components'
+import Menu from "./Navigation/Menu";
 
 
 
@@ -12,7 +12,6 @@ class Header extends Component {
     };
   }
   render() {
-    // console.log(this.state);
 
     return (
       <>
@@ -24,3 +23,4 @@ class Header extends Component {
 }
 
 export default Header;
+

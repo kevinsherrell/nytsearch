@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Route, Switch} from 'react-router-dom'
-import FrontPageNews from './FrontPageNews'
-import Results from './Results'
+import FrontPageNews from '../../components/main/FrontPage/FrontPageNews'
+import Results from '../main/Search/Results'
 
 class Main extends Component {
     state = {  }

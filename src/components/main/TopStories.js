@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-// const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 class TopStories extends Component {
   state = {
@@ -21,7 +21,6 @@ class TopStories extends Component {
     });
   }
   render() {
-      console.log(this.state)
     return (
         <div className="topStories">
         </div>

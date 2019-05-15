@@ -6,9 +6,9 @@ const ArticleContainer = (props) => {
 
 
     return (
-        <div>
+        <React.Fragment>
             <Articles {...props}/>
-        </div>
+        </React.Fragment>
     );
 }
  

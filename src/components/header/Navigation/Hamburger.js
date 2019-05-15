@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import hamburgerMenuImage from "./hamburger.svg";
+import hamburgerMenuImage from "../../../images/hamburgericon.svg";
 
 class Hamburger extends Component {
   constructor() {
