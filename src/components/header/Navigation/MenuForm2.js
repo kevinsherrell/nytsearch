@@ -59,8 +59,9 @@ const SearchForm = styled.form`
   // text-align: center;
   @media (min-width: 768px) {
     grid-row-start: 1;
-    grid-column-start: 2;
+    grid-column-start: 1;
     /* grid-column: span 1; */
+    
   }
   input, button{
     border: none;
@@ -88,6 +89,9 @@ const SearchForm = styled.form`
 const MenuFormWrapper = styled(Wrapper_S)`
   display: block;
   height: 35px;
+  @media(min-width: 768px){
+    margin-right: 0px;
+  }
 `
 const SearchNavigation = styled.div`
 text-align: center;
@@ -95,7 +99,7 @@ width: 100%;
   position: absolute;
   bottom: 0;
   button{
-    width: 50%;
+    width: 55%;
   }
 `
 export default withData(Form);

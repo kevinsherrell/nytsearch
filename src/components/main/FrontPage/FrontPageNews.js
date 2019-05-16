@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import axios from "axios";
 
+import axios from "axios";
 import styled from "styled-components";
 import Wrapper_S from "../../styled/Wrapper_S";
 import { withData } from "../../../context/dataProvider";
 
 import FrontPageArticles from "./FrontPageArticles";
-require("dotenv").config();
 const apiKey = process.env.REACT_APP_API_KEY;
 
 class FrontPageNews extends Component {

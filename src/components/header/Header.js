@@ -16,7 +16,7 @@ class Header extends Component {
     return (
       <>
         {this.state.menuToggle === true ? <Menu /> : null}
-        <header>{this.props.children}</header>
+        <header id='home'>{this.props.children}</header>
       </>
     );
   }

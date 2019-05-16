@@ -12,3 +12,28 @@
 a{
     text-decoration: none;
 }
+.scrolled{
+    position: fixed; 
+    top: 0;
+    transition: all ease-in 300ms;
+    width: 100%;
+}
+.scrolled p{
+    display: none;
+}
+@media(min-width: 768px){
+    .scrolled p{
+        display: none;
+    }
+    .scrolled p:nth-child(2){
+        display: none;
+    }
+}
+.scrolled button{
+    padding: 5px;
+}
+/* @media(min-width: 768px){
+    .scrolled .navWrapper{
+        grid-template-columns:3fr 1fr;
+    }
+} */
